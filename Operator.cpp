@@ -78,6 +78,36 @@ int main()
 	// Exercise 12
 	printf("---Exercise 12---\n");
 	cout << 45 * 0.8 - 17 << endl;
+	// Exercise 13
+	printf("---Exercise 13---\n");
+	int digit;
+	cout << "Please input a digit (xxxxx): ";
+	cin >> digit;
+	cout << (digit / 10000) + ((digit % 100) / 10) << endl;
+	// Exercise 14
+	printf("---Exercise 14---\n");
+	int res = 0, digit_1;
+	cout << "Please input a number (xxxx): ";
+	cin >> digit_1;
+	res += (((digit_1 % 10) + 2) % 10) * 1;
+	res += ((((digit_1 % 100)/10) + 2) % 10) * 10;
+	res += ((((digit_1 % 1000)/100) + 2) % 10) * 100;
+	res += ((((digit_1 % 10000)/1000) + 2) % 10) * 1000;
+	cout << res << endl;
+	// Exercise 15
+	printf("---Exercise 15---\n");
+	cout << "Input a digit (xxx): ";
+	cin >> digit;
+	cout << (digit % 10) + ((digit % 100)/10) + ((digit % 1000)/100) << endl;
+	// Exercise 16
+	printf("---Exercise 16---\n");
+	int num_1, num_2, num_3;
+	cout << "Input a digit (xxx): ";
+	cin >> digit;
+	num_1 = digit % 10;
+	num_2 = (digit % 100) / 10;
+	num_3 = (digit % 1000) / 100;
+	cout << num_1 * 100 + num_2 * 10 + num_3 << endl;
 	system("pause");
 	return 0;
 }
