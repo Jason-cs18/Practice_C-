@@ -14,6 +14,10 @@ void prime();
 void marks();
 int Factorial(int num);
 int Multiplication(int num);
+int PrimeFactors(int num);
+int Fibonacci(int num);
+int pow(int num1, int num2);
+
 
 int main()
 {
@@ -60,9 +64,27 @@ int main()
 	printf("---Exercise 10---\n");
 	Multiplication(15);
 
-	// Exercise 11
+	// Exercise 11 (Difficult)
 	printf("---Exercise 11---\n");
+	//PrimeFactors(10);
 
+	// Exercise 12
+	printf("---Exercise 12---\n");
+	cout << "Fibonacci(3): " << Fibonacci(3) << endl;
+	cout << "Fibonacci(4): " << Fibonacci(4) << endl;
+
+	// Exercise 13 (pass)
+	printf("---Exercise 13---\n");
+
+	// Exercise 14
+	printf("---Exercise 14---\n");
+	cout << "Pow(3, 4): " << pow(3, 4) << endl;
+
+	// Exercise 15 (pass)
+	printf("---Exercise 15---\n");
+	
+	// Exercise 16 (pass)
+	printf("---Exercise 16---\n");
 
 	system("pause");
 	return 0;
@@ -210,5 +232,27 @@ int Multiplication(int num_1){
 	else{
 		cout << num_1 * 15 << endl;
 		return Multiplication(num_1 - 1);
+	}
+}
+
+int Fibonacci(int num){
+	if (num == 0){
+		return 0;
+	}
+	else if (num == 1){
+		return 1;
+	}
+	else{
+		return Fibonacci(num - 1) + Fibonacci(num - 2);
+	}
+}
+
+int pow(int num1, int num2){
+	if (num2 == 0){
+		return 1;
+	}
+	else{
+
+		return num1 * pow(num1, num2 - 1);
 	}
 }
